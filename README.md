@@ -204,7 +204,7 @@ AttendEye
 ## Clone Repository
 
 ```bash
-git clone https://github.com/srujana59/AttendEye.git
+git clone https://github.com/kiranbaby1824/AttendEye.git
 ```
 
 ## Backend
