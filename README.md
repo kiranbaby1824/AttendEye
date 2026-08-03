@@ -1,22 +1,31 @@
-AttendEye – Real-Time Student Attentiveness Monitoring System
-AttendEye is a real-time student attentiveness monitoring system that uses Computer Vision and Deep Learning to monitor student engagement during online classes. The system detects behaviors such as blinking, yawning, head direction, mobile phone usage, and face presence to calculate an overall attentiveness score. It provides a live dashboard with statistics and stores session information for future analysis.
+# AttendEye – Real-Time Student Attentiveness Monitoring System
 
-🚀 Features
-🔐 Secure User Authentication (Signup/Login)
-🎥 Live Webcam Monitoring
-👤 Face Detection
-😊 Face Mesh Tracking
-👁️ Blink Detection
-🥱 Yawn Detection
-📱 Mobile Phone Detection using YOLOv8
-🧭 Head Direction Detection
-🚫 No Face / Absence Detection
-📊 Real-Time Attentiveness Percentage
-📈 Live Attention Graph
-📷 Automatic Screenshot Capture on Mobile Detection
-💾 Session Data Storage in MongoDB
-🚪 Secure Logout
-📷 System Workflow
+AttendEye is a real-time student attentiveness monitoring system that uses **Computer Vision** and **Deep Learning** to monitor student engagement during online classes. The system detects behaviors such as blinking, yawning, head direction, mobile phone usage, and face presence to calculate an overall attentiveness score. It provides a live dashboard with statistics and stores session information for future analysis.
+
+---
+
+# 🚀 Features
+
+- 🔐 Secure User Authentication (Signup/Login)
+- 🎥 Live Webcam Monitoring
+- 👤 Face Detection
+- 😊 Face Mesh Tracking
+- 👁️ Blink Detection
+- 🥱 Yawn Detection
+- 📱 Mobile Phone Detection using YOLOv8
+- 🧭 Head Direction Detection
+- 🚫 No Face / Absence Detection
+- 📊 Real-Time Attentiveness Percentage
+- 📈 Live Attention Graph
+- 📷 Automatic Screenshot Capture on Mobile Detection
+- 💾 Session Data Storage in MongoDB
+- 🚪 Secure Logout
+
+---
+
+# 📷 System Workflow
+
+```text
                  User
                    │
                    ▼
@@ -46,97 +55,126 @@ AttendEye is a real-time student attentiveness monitoring system that uses Compu
                    │
      ┌─────────────┼─────────────┐
      ▼             ▼             ▼
- Face Detection  Face Mesh    YOLOv8 Detection
+Face Detection  Face Mesh   YOLOv8 Detection
      │             │             │
      ▼             ▼             ▼
- Blink      Yawn Detection   Mobile Detection
- Detection
+Blink        Yawn Detection  Mobile Detection
+Detection
      │
      ▼
- Head Direction
- Detection
+Head Direction Detection
      │
      ▼
- Attentiveness Calculation
+Attentiveness Calculation
      │
      ▼
- Live Dashboard
+Live Dashboard
      │
      ▼
- MongoDB Storage
-🛠️ Tech Stack
-Frontend
-React
-TypeScript
-Vite
-Tailwind CSS
-Lucide React Icons
-Fetch API
-Backend
-Node.js
-Express.js
-JWT Authentication
-bcryptjs
-CORS
-AI Backend
-Python
-Flask
-Flask-CORS
-OpenCV
-MediaPipe Face Detection
-MediaPipe Face Mesh
-YOLOv8
-NumPy
-Database
-MongoDB
-Mongoose
-🧠 AI Modules
-👤 Face Detection
+MongoDB Storage
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React Icons
+- Fetch API
+
+## Backend
+
+- Node.js
+- Express.js
+- JWT Authentication
+- bcryptjs
+- CORS
+
+## AI Backend
+
+- Python
+- Flask
+- Flask-CORS
+- OpenCV
+- MediaPipe Face Detection
+- MediaPipe Face Mesh
+- YOLOv8
+- NumPy
+
+## Database
+
+- MongoDB
+- Mongoose
+
+---
+
+# 🧠 AI Modules
+
+## 👤 Face Detection
 Detects whether the student is present in front of the camera.
 
-👁️ Blink Detection
+## 👁️ Blink Detection
 Uses MediaPipe Face Mesh eye landmarks to detect eye closure and estimate attentiveness.
 
-🥱 Yawn Detection
+## 🥱 Yawn Detection
 Detects mouth opening using facial landmarks to identify drowsiness.
 
-📱 Mobile Phone Detection
-Uses YOLOv8 object detection model to detect mobile phone usage during class.
+## 📱 Mobile Phone Detection
+Uses YOLOv8 object detection to detect mobile phone usage during class.
 
-🧭 Head Direction Detection
+## 🧭 Head Direction Detection
 Determines whether the student is looking forward, left, right, up, or down.
 
-📊 Attentiveness Calculation
-The attentiveness score is dynamically calculated using detected behaviors including:
+## 📊 Attentiveness Calculation
 
-Face Presence
-Eye State
-Yawning
-Head Position
-Mobile Usage
+The attentiveness score is dynamically calculated using:
+
+- Face Presence
+- Eye State
+- Yawning
+- Head Position
+- Mobile Usage
+
 The score is continuously updated and displayed on the dashboard.
 
-📊 Dashboard
+---
+
+# 📊 Dashboard
+
 The dashboard provides:
 
-Live Camera Feed
-Current Attentiveness Percentage
-Number of Students
-Live Attention Graph
-Student Behaviour Statistics
-Session Summary
-💾 Database
+- Live Camera Feed
+- Current Attentiveness Percentage
+- Number of Students
+- Live Attention Graph
+- Student Behaviour Statistics
+- Session Summary
+
+---
+
+# 💾 Database
+
 MongoDB stores:
 
-User Information
-Login Credentials
-Session Details
-Average Attentiveness
-Last Session Attentiveness
-Class History
-Screenshots are stored locally inside the project directory.
+- User Information
+- Login Credentials
+- Session Details
+- Average Attentiveness
+- Last Session Attentiveness
+- Class History
 
-📂 Project Structure
+> Screenshots are stored locally inside the project directory.
+
+---
+
+# 📂 Project Structure
+
+```text
 AttendEye
 │
 ├── Backend
@@ -157,40 +195,62 @@ AttendEye
 ├── yolov8n.pt
 ├── screenshots
 └── README.md
-⚙️ Installation
-Clone Repository
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
 git clone https://github.com/srujana59/AttendEye.git
-Backend
+```
+
+## Backend
+
+```bash
 cd Backend
 npm install
 npm start
-Frontend
+```
+
+## Frontend
+
+```bash
 cd Frontend
 npm install
 npm run dev
-AI Backend
+```
+
+## AI Backend
+
+```bash
 pip install -r requirements.txt
 python app.py
-📸 Screenshots
+```
+
+---
+
+# 📸 Screenshots
+
 Add your screenshots here.
 
-Example:
+- Landing Page
+- Login Page
+- Live Dashboard
+- Behaviour Analysis
+- Attention Graph
 
-Landing Page
+---
 
-Login Page
+# 🔮 Future Enhancements
 
-Live Dashboard
-
-Behaviour Analysis
-
-Attention Graph
-🔮 Future Enhancements
-Multi-student classroom monitoring
-Emotion Recognition
-Attendance Generation
-Teacher Analytics Dashboard
-Email Notifications
-Performance Reports
-Cloud Deployment
-Mobile Application
+- Multi-student Classroom Monitoring
+- Emotion Recognition
+- Attendance Generation
+- Teacher Analytics Dashboard
+- Email Notifications
+- Performance Reports
+- Cloud Deployment
+- Mobile Application
